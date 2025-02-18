@@ -9,6 +9,7 @@ export default async function Page() {
   const id = generateUUID();
 
   const cookieStore = await cookies();
+
   const modelIdFromCookie = cookieStore.get('chat-model');
 
   if (!modelIdFromCookie) {

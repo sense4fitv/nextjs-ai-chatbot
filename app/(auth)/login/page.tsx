@@ -7,10 +7,13 @@ import { toast } from 'sonner';
 
 import { AuthForm } from '@/components/auth-form';
 import { SubmitButton } from '@/components/submit-button';
+import { FlipWords } from '@/components/ui/flip-words';
 
 import { login, type LoginActionState } from '../actions';
 
 export default function Page() {
+  const words = ["better", "in shape", "healthier"];
+
   const router = useRouter();
 
   const [email, setEmail] = useState('');
@@ -30,7 +33,7 @@ export default function Page() {
       toast.error('Failed validating your submission!');
     } else if (state.status === 'success') {
       setIsSuccessful(true);
-      router.refresh();
+      router.push('/set-trainer');
     }
   }, [state.status, router]);
 
@@ -40,7 +43,15 @@ export default function Page() {
   };
 
   return (
-    <div className="flex h-dvh w-screen items-start pt-12 md:pt-0 md:items-center justify-center bg-background">
+    
+    <div className="flex flex-col md:flex-row h-dvh w-full items-center pt-12 md:pt-0 md:items-center justify-center bg-background">
+      <div className="flex justify-center items-center px-4">
+        <div className="text-4xl flex-1 mx-auto font-normal text-neutral-600 dark:text-neutral-400">
+          Get
+          <FlipWords words={words} /> <br />
+          with <span className="text-sky-500">Sense4FIT AI</span>
+        </div>
+      </div>
       <div className="w-full max-w-md overflow-hidden rounded-2xl flex flex-col gap-12">
         <div className="flex flex-col items-center justify-center gap-2 px-4 text-center sm:px-16">
           <h3 className="text-xl font-semibold dark:text-zinc-50">Sign In</h3>

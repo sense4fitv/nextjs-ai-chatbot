@@ -3,6 +3,7 @@
 import type { User } from 'next-auth';
 import { useRouter } from 'next/navigation';
 
+
 import { PlusIcon } from '@/components/icons';
 import { SidebarHistory } from '@/components/sidebar-history';
 import { SidebarUserNav } from '@/components/sidebar-user-nav';
@@ -16,6 +17,7 @@ import {
   useSidebar,
 } from '@/components/ui/sidebar';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip';
 
 export function AppSidebar({ user }: { user: User | undefined }) {
@@ -35,7 +37,12 @@ export function AppSidebar({ user }: { user: User | undefined }) {
               className="flex flex-row gap-3 items-center"
             >
               <span className="text-lg font-semibold px-2 hover:bg-muted rounded-md cursor-pointer">
-                Chatbot
+              <Image 
+                src="/s4flogo.png"
+                width={500}
+                height={500}
+                alt="Picture of the author"
+              />
               </span>
             </Link>
             <Tooltip>

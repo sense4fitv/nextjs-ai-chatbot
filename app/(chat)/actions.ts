@@ -2,11 +2,13 @@
 
 import { generateText, Message } from 'ai';
 import { cookies } from 'next/headers';
+import { auth } from '../(auth)/auth';
 
 import {
   deleteMessagesByChatIdAfterTimestamp,
   getMessageById,
   updateChatVisiblityById,
+  updateUserCoach
 } from '@/lib/db/queries';
 import { VisibilityType } from '@/components/visibility-selector';
 import { myProvider } from '@/lib/ai/models';
@@ -51,4 +53,22 @@ export async function updateChatVisibility({
   visibility: VisibilityType;
 }) {
   await updateChatVisiblityById({ chatId, visibility });
+}
+
+
+export async function assignCoach(trainerId: string) {
+  try {
+      const session = await auth(); // Get authenticated user
+      if (!session?.user?.id) {
+          return { error: 'User not authenticated' };
+      }
+
+      const userId = session.user.id;
+      const coachId = trainerId;
+
+      const success = await updateUserCoach(userId, coachId);
+      return success ? { message: 'Coach assigned successfully' } : { error: 'Update failed' };
+  } catch (error) {
+      return { error: 'Internal Server Error' };
+  }
 }

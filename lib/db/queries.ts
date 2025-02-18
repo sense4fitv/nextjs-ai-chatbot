@@ -35,6 +35,20 @@ export async function getUser(email: string): Promise<Array<User>> {
   }
 }
 
+export async function updateUserCoach(userId: string, coachId: string | null): Promise<boolean> {
+  try {
+    const result = await db
+      .update(user)
+      .set({ coachId })
+      .where(eq(user.id, userId));
+
+    return result.count > 0; // Check if any row was updated
+  } catch (error) {
+    console.error(`Failed to update coachId for user ${userId}:`, error);
+    throw error;
+  }
+}
+
 export async function createUser(email: string, password: string) {
   const salt = genSaltSync(10);
   const hash = hashSync(password, salt);

@@ -15,6 +15,8 @@ export const user = pgTable('User', {
   id: uuid('id').primaryKey().notNull().defaultRandom(),
   email: varchar('email', { length: 64 }).notNull(),
   password: varchar('password', { length: 64 }),
+  coachId: uuid('coachId')
+  .references(() => coach.id)
 });
 
 export type User = InferSelectModel<typeof user>;
@@ -32,6 +34,24 @@ export const chat = pgTable('Chat', {
 });
 
 export type Chat = InferSelectModel<typeof chat>;
+
+
+export const coach = pgTable('Coach', {
+  id: uuid('id').primaryKey().notNull().defaultRandom(),
+  createdAt: timestamp('createdAt').notNull(),
+  name: text('name').notNull(),
+  prompt: text('prompt').notNull(),
+  visibility: varchar('visibility', { enum: ['public', 'private'] })
+    .notNull()
+    .default('public'),
+})
+
+export type Coach = InferSelectModel<typeof coach>;
+
+// export const userCoach = pgTable('UserCoach', {
+//   id: uuid('id').primaryKey().notNull().defaultRandom(),
+//   createdAt: timestamp('createdAt').notNull(),
+// })
 
 export const message = pgTable('Message', {
   id: uuid('id').primaryKey().notNull().defaultRandom(),
