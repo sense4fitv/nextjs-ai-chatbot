@@ -31,7 +31,7 @@ export default function SpotlightNewDemo() {
             Find the Perfect Coach
         </h1>
         <p className="mt-4 font-normal text-base text-neutral-300 max-w-2xl text-center mx-auto">
-        Choosing the right trainer is an important step toward achieving your fitness goals. Whether you're looking to build strength, lose weight, improve endurance, or enhance overall wellness, we have a range of trainers to match your needs.
+        Choosing the right trainer is an important step toward achieving your fitness goals. Whether youre looking to build strength, lose weight, improve endurance, or enhance overall wellness, we have a range of trainers to match your needs.
         </p>
         <div className="grid md:grid-cols-3 grid-cols-1 gap-4 max-w-5xl mx-auto mt-10">
             <div className="">
@@ -74,7 +74,7 @@ export default function SpotlightNewDemo() {
                     <EvervaultCard text="Antonio" />
                 
                     <h2 className="dark:text-white text-black mt-4 text-sm font-light">
-                    Antonio is all about muscle growth and sculpting the perfect physique. Whether you're a beginner or an advanced lifter, he helps you maximize strength and aesthetics.
+                    Antonio is all about muscle growth and sculpting the perfect physique. Whether youre a beginner or an advanced lifter, he helps you maximize strength and aesthetics.
                     </h2>
                     <div className="flex flex-row gap-x-2">
                         <p className="text-sm border font-light dark:border-white/[0.2] border-black/[0.2] rounded-full mt-4 text-black dark:text-white px-2 py-0.5">
