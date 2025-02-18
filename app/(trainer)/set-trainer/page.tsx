@@ -24,7 +24,7 @@ export default function SpotlightNewDemo() {
     }
 
   return (
-    <div className="h-auto pt-[10rem] w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+    <div className="h-auto pt-[1rem]  md:pt-[10rem] w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <Spotlight />
       <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
         <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
@@ -33,7 +33,7 @@ export default function SpotlightNewDemo() {
         <p className="mt-4 font-normal text-base text-neutral-300 max-w-2xl text-center mx-auto">
         Choosing the right trainer is an important step toward achieving your fitness goals. Whether youre looking to build strength, lose weight, improve endurance, or enhance overall wellness, we have a range of trainers to match your needs.
         </p>
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-4 max-w-5xl mx-auto mt-10">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-y-20 md:gap-x-10 max-w-5xl mx-auto mt-10">
             <div className="">
             <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative h-[30rem]">
                 <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
