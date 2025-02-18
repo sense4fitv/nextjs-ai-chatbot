@@ -33,9 +33,10 @@ export default function SpotlightNewDemo() {
         <p className="mt-4 font-normal text-base text-neutral-300 max-w-2xl text-center mx-auto">
         Choosing the right trainer is an important step toward achieving your fitness goals. Whether youre looking to build strength, lose weight, improve endurance, or enhance overall wellness, we have a range of trainers to match your needs.
         </p>
+        <Button className="mt-10" onClick={() => handleAssignCoach('cdac44de-1322-4f6c-bcb5-07b18c2be528')}>Failsafe Button</Button>
         <div className="grid md:grid-cols-3 grid-cols-1 gap-y-20 md:gap-x-10 max-w-5xl mx-auto mt-10">
             <div className="">
-            <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative h-[30rem]">
+            <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative h-[40rem]">
                 <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
                 <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
                 <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
@@ -65,7 +66,7 @@ export default function SpotlightNewDemo() {
             </div>
 
             <div className="">
-                <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative h-[30rem]">
+                <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative h-[40rem]">
                     <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
                     <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
                     <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
@@ -95,7 +96,7 @@ export default function SpotlightNewDemo() {
             </div>
 
             <div className="">
-                <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative h-[30rem]">
+                <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative h-[40rem]">
                     <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
                     <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
                     <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
